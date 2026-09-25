@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minha Rede · CRM pessoal</title>
+<meta name="description" content="CRM pessoal para quem conhece muita gente em eventos e reuniões. Roda no navegador, sem servidor.">
+<meta name="theme-color" content="#F1F1F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111217" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="vol">CRM pessoal</span>
+      <h1 id="appName">Minha Rede</h1>
+      <p class="sub">Quem você conheceu, o que combinaram e quem merece sua atenção agora.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" type="button" data-open="importar">Trazer da IA</button>
+      <button class="btn primary" type="button" data-open="novo">Novo contato</button>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Seções">
+    <button type="button" data-view="hoje">Hoje <span class="n" id="nFila"></span></button>
+    <button type="button" data-view="funil">Funil</button>
+    <button type="button" data-view="matriz">Prioridade</button>
+    <button type="button" data-view="contatos">Contatos</button>
+    <button type="button" data-view="atividades">Atividades</button>
+    <button type="button" data-view="ajustes">Ajustes</button>
+  </nav>
+
+  <main id="view"></main>
+
+  <footer class="foot">Seus contatos ficam só neste navegador. Nada é enviado para servidor nenhum. Faça backup na aba Ajustes.</footer>
+</div>
+
+<dialog id="dlg" aria-label="Janela do contato"><div id="dlgBody"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript>Este app precisa de JavaScript ligado no navegador.</noscript>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

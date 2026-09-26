@@ -27,7 +27,7 @@ Uma liderança que participou de um workshop de IA. Pode nunca ter programado. E
 |---|---|
 | `config.js` | `window.CRM_CONFIG`: tipos de relação com peso, potencial, limites de urgência e esfriamento, etapas, tipos de interação e presets por setor |
 | `app.js` | Toda a lógica, em 10 seções numeradas nos comentários |
-| `styles.css` | Identidade do workshop (azul elétrico, limão, grafite, fonte Archivo) com acabamento de app da Apple e modo claro e escuro automáticos. Variáveis de cor no `:root`, cores dos quadrantes em `.q-agir`, `.q-agendar`, `.q-rapido`, `.q-depois` e de cada tipo de interação em `.ti-reuniao`, `.ti-ligacao` etc. |
+| `styles.css` | Cores da Fundação Lemann (azul-marinho #052B47 e verde #00A180) com design no estilo Apple (fonte do sistema, listas agrupadas) e modo claro e escuro automáticos. Variáveis de cor no `:root`, cores dos quadrantes em `.q-agir`, `.q-agendar`, `.q-rapido`, `.q-depois` e de cada tipo de interação em `.ti-reuniao`, `.ti-ligacao` etc. |
 | `index.html` | Estrutura fixa: cabeçalho, abas, `<main id="view">`, um `<dialog>` reutilizado |
 
 Funções principais do `app.js`:

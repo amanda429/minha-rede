@@ -540,12 +540,16 @@ dialog.largo { width: min(1080px, calc(100vw - 24px)); }
   .perfil-resumo { grid-template-columns: auto minmax(0, 1fr); }
   .perfil-resumo > .btn { grid-column: 1 / -1; justify-self: start; }
   .tema-sel span { display: none; }
-  .tema-sel button { padding: 7px 10px; }
+  .tema-sel button { padding: 8px 11px; }
+  header.top { padding: 22px 0 14px; }
+  .actions { width: 100%; flex-wrap: nowrap; }
+  .actions .btn { flex: 1; justify-content: center; padding: 10px 10px; font-size: 13.5px; white-space: nowrap; }
+  .legenda-rede .dica { margin-left: 0; width: 100%; }
   .tabs { flex-direction: row; justify-content: space-between; }
   .tabs button { flex: 1; padding: 8px 2px; font-size: 10px; }
   .wrap { padding: 0 16px 100px; }
   .saud h2 { font-size: 28px; }
-  .spark { opacity: .5; }
+  .spark { opacity: .5; width: 48%; }
   .metrics { grid-template-columns: 1fr 1fr; }
   .matriz { grid-template-columns: 1fr; }
   .card { grid-template-columns: auto minmax(0, 1fr); }

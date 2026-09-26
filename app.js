@@ -711,7 +711,7 @@
 
   function mapaRede(lista) {
     return `<div class="rede-mapa" id="rede" role="img" aria-label="Mapa da rede com ${plural(lista.length, 'pessoa', 'pessoas')}. As mesmas ligações aparecem em lista logo abaixo."><canvas></canvas></div>
-      <div class="legenda-rede"><span><i class="lp"></i>Pessoas</span><span><i class="lt"></i>Temas em comum</span><span><i class="le"></i>Eventos</span><span><i class="la"></i>Uma oferece o que a outra precisa</span><span class="dica">Passe o mouse numa pessoa para ver as ligações dela</span></div>`;
+      <div class="legenda-rede"><span><i class="lp"></i>Pessoas</span><span><i class="lt"></i>Temas em comum</span><span><i class="le"></i>Eventos</span><span><i class="la"></i>Uma oferece o que a outra precisa</span><span class="dica">Passe o mouse ou toque numa pessoa para ver as ligações dela</span></div>`;
   }
 
   function pararRede() {

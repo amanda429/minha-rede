@@ -1,7 +1,7 @@
 // Guarda os arquivos do app para ele abrir mesmo sem internet.
 // Sempre tenta a versão mais nova primeiro; sem conexão, usa a cópia guardada.
 // Ao publicar mudanças grandes, troque o número da VERSAO.
-const VERSAO = 'minha-rede-v6';
+const VERSAO = 'minha-rede-v7';
 const ARQUIVOS = ['./', 'index.html', 'styles.css', 'config.js', 'app.js', 'manifest.webmanifest',
   'img/icone-192.png', 'img/icone-512.png', 'img/favicon.png'];
 

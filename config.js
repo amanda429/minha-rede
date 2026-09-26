@@ -1,5 +1,5 @@
 /*
-  Configuração do Minha Rede.
+  Configuração do My Network Effects.
 
   Este é o arquivo mais fácil de mudar. Você pode pedir para a sua IA:
   "Troque os tipos de relação do config.js para o meu contexto: ..."
@@ -59,7 +59,7 @@
   };
 
   window.CRM_CONFIG = {
-    nomeApp: 'Minha Rede',
+    nomeApp: 'My Network Effects',
 
     // Usado no link do WhatsApp quando o telefone foi salvo sem código do país.
     codigoPais: '55',

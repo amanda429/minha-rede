@@ -1,5 +1,5 @@
 /*
-  Minha Rede · Personal CRM
+  My Network Effects · Personal CRM
 
   Tudo roda no navegador. Os contatos ficam no localStorage desta máquina.
   Nenhum dado é enviado para servidor.
@@ -155,6 +155,8 @@
   }
 
   let aj = Object.assign(ajustesPadrao(), store.get(KEY_AJUSTES, {}) || {});
+  // O app se chamava Minha Rede. Quem nunca trocou o nome passa a ver o nome novo.
+  if (aj.nomeApp === 'Minha Rede') aj.nomeApp = CFG.nomeApp;
   let contatos = store.get(KEY_DADOS, []);
   contatos = (Array.isArray(contatos) ? contatos : []).filter((c) => c && c.nome).map(carregar);
   let aba = store.get(KEY_ABA, 'hoje');
@@ -1760,7 +1762,7 @@ Regras:
     const ini = fu.replace(/-/g, '');
     const fim = somarDias(1, fu).replace(/-/g, '');
     const agora = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
-    const txt = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Minha Rede//Personal CRM//PT', 'BEGIN:VEVENT',
+    const txt = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//My Network Effects//Personal CRM//PT', 'BEGIN:VEVENT',
       `UID:${c.id}-${ini}@minha-rede`, `DTSTAMP:${agora}`, `DTSTART;VALUE=DATE:${ini}`, `DTEND;VALUE=DATE:${fim}`,
       `SUMMARY:${e('Follow-up: ' + c.nome)}`, `DESCRIPTION:${e(c.proximoPasso)}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     baixar(`follow-up-${slug(c.nome)}.ics`, txt, 'text/calendar;charset=utf-8');
@@ -1905,7 +1907,7 @@ Regras:
         render();
         toast('Backup restaurado.');
       } catch (e) {
-        toast('Esse arquivo não parece um backup do Minha Rede.');
+        toast('Esse arquivo não parece um backup do My Network Effects.');
       }
     };
     leitor.readAsText(arquivo);

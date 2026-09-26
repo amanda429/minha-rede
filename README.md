@@ -1,10 +1,26 @@
-# Minha Rede · Personal CRM
+# My Network Effects · Personal CRM
 
-Um CRM simples para quem conhece muita gente em eventos e reuniões.
+Um CRM pessoal para quem conhece muita gente em eventos e reuniões.
 
 Você registra quem é a pessoa, como falar com ela, o que combinaram e quando retomar. O app mostra quem merece sua atenção primeiro.
 
 Criado para o workshop **IA na prática para lideranças**, de Amanda Graciano ([@gracianoamanda](https://www.instagram.com/gracianoamanda/)). Feito para você baixar, usar e melhorar com a sua IA.
+
+## Por que "network effects"
+
+Efeito de rede (*network effects*, em inglês) é quando cada nova conexão aumenta o valor da rede inteira. É o que faz um aplicativo de mensagens valer mais a cada pessoa que entra: você não ganha só um contato, ganha acesso ao que aquela pessoa pode trazer.
+
+Com as suas relações acontece o mesmo. Alguém que você conheceu num evento te apresenta a outra pessoa, que abre uma parceria, que vira um projeto. O valor não está em cada contato sozinho, está nas ligações entre eles.
+
+Só que esse efeito não acontece por conta própria. Relação que ninguém cuida esfria: o cartão fica na gaveta, o follow-up não sai e a oportunidade passa. Por isso a gestão importa:
+
+- **Registrar** quem é a pessoa, o que ela precisa e o que ela oferece, logo depois de conhecer.
+- **Retomar** no tempo certo, com um próximo passo claro.
+- **Priorizar** com critério: nem toda relação pede a mesma atenção agora.
+- **Conectar** pessoas que podem se ajudar, sempre perguntando antes se as duas topam.
+- **Oferecer antes de pedir:** o que você oferece conta tanto quanto o que você busca.
+
+O My Network Effects foi feito para isso: tirar da cabeça (e da gaveta) o trabalho de lembrar, para sobrar energia para o que importa, que é a conversa.
 
 ## O que ele faz
 
@@ -79,4 +95,4 @@ Antes de pedir qualquer mudança, baixe um backup dos seus contatos.
 | `AGENTS.md` | Instruções para a IA que for mexer no código |
 | `MELHORIAS.md` | Ideias de evolução com pedidos prontos |
 
-Os contatos de exemplo do app são todos fictícios.
+Os contatos de exemplo do app são todos fictícios. O endereço do app continua **amanda429.github.io/minha-rede**, e os dados do navegador continuam guardados com o nome antigo, para ninguém perder nada.

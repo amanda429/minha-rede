@@ -1,6 +1,6 @@
 # Instruções para agentes de IA
 
-Você está ajudando alguém a usar ou melhorar o **Minha Rede**, um CRM pessoal que roda inteiro no navegador.
+Você está ajudando alguém a usar ou melhorar o **My Network Effects** (antes chamado Minha Rede), um CRM pessoal que roda inteiro no navegador.
 
 ## Quem provavelmente está pedindo
 
@@ -16,7 +16,7 @@ Uma liderança que participou de um workshop de IA. Pode nunca ter programado. E
 1. **Sem instalação e sem build.** O app abre com dois cliques no `index.html`. Nada de npm, frameworks ou etapas de compilação.
 2. **Sem `type="module"` nem `import`.** Módulos ES não funcionam quando o arquivo é aberto direto do disco (`file://`). Use scripts comuns.
 3. **Os dados não saem do navegador.** Não adicione envio para servidor, analytics ou APIs externas sem a pessoa pedir explicitamente e entender o que será enviado.
-4. **Compatibilidade dos dados.** Os contatos ficam no `localStorage`, na chave `minha-rede:dados:v1`. Se mudar o formato, escreva uma migração que leia o formato antigo. Nunca apague os dados da pessoa.
+4. **Compatibilidade dos dados.** Os contatos ficam no `localStorage`, na chave `minha-rede:dados:v1` (as chaves continuam com o nome antigo para ninguém perder dados). Se mudar o formato, escreva uma migração que leia o formato antigo. Nunca apague os dados da pessoa.
 5. **Nunca coloque dados reais de contatos no repositório.** Exemplos são sempre fictícios.
 6. **Todo texto que vem do usuário passa por `esc()`** antes de entrar no HTML.
 7. **Textos da interface em português do Brasil.**

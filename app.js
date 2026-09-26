@@ -589,6 +589,7 @@
     const v = Math.max(0, Math.min(100, pct));
     return `<div class="ring-wrap"><svg class="ring ${cls || ''}" viewBox="0 0 140 140" aria-hidden="true">
       <circle class="trilho" cx="70" cy="70" r="${r}"/>
+      <circle class="brilho" cx="70" cy="70" r="${r}" stroke-dasharray="${(circ * v / 100).toFixed(1)} ${circ.toFixed(1)}"/>
       <circle class="valor" cx="70" cy="70" r="${r}" stroke-dasharray="${(circ * v / 100).toFixed(1)} ${circ.toFixed(1)}"/>
     </svg>${centro ? `<div class="centro">${centro}</div>` : ''}</div>`;
   }
@@ -606,7 +607,7 @@
       d += ` C${cx},${y0.toFixed(1)} ${cx},${y1.toFixed(1)} ${x1.toFixed(1)},${y1.toFixed(1)}`;
     }
     const pontos = pts.filter((p, i) => vals[i] > 0).map(([x, y]) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2"/>`).join('');
-    return `<svg class="spark" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path class="a" d="${d} L${w},${h} L0,${h} Z"/><path class="l" d="${d}"/>${pontos}</svg>`;
+    return `<svg class="spark" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path class="a" d="${d} L${w},${h} L0,${h} Z"/><path class="g" d="${d}"/><path class="l" d="${d}"/>${pontos}</svg>`;
   }
 
   /* Mapa da rede no jeito do gráfico do Obsidian: um fio fino por ligação, bolinhas pequenas com o nome

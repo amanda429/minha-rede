@@ -69,11 +69,12 @@ dos últimos 7 dias. O pedido deve pedir 3 prioridades para a próxima semana
 e não pode inventar nada que não esteja nos dados.
 ```
 
-### Usar no celular como aplicativo
+### Filtrar o mapa da rede por tema
 
 ```
-Transforme o Minha Rede num app instalável no celular (PWA),
-funcionando sem internet, sem mudar a forma como os dados são guardados.
+Na aba Conexões do Minha Rede, adicione um filtro por tema acima do mapa.
+Ao escolher um tema, destaque só as pessoas ligadas a ele e apague o resto,
+como já acontece quando passo o mouse numa pessoa.
 ```
 
 ## Cuidado com estas

@@ -1,20 +1,27 @@
-# Minha Rede · CRM pessoal
+# Minha Rede · Personal CRM
 
 Um CRM simples para quem conhece muita gente em eventos e reuniões.
 
 Você registra quem é a pessoa, como falar com ela, o que combinaram e quando retomar. O app mostra quem merece sua atenção primeiro.
 
-Criado para o workshop **IA na prática para lideranças**, de Amanda Graciano. Feito para você baixar, usar e melhorar com a sua IA.
+Criado para o workshop **IA na prática para lideranças**, de Amanda Graciano ([@gracianoamanda](https://www.instagram.com/gracianoamanda/)). Feito para você baixar, usar e melhorar com a sua IA.
 
 ## O que ele faz
 
-- **Ficha completa:** nome, cargo, organização, telefone, e-mail, LinkedIn, onde se conheceram, o que a pessoa precisa, o que ela oferece, anotações e tags.
+- **Seu perfil:** quem é a pessoa dona do app (foto, nome, cargo, redes, interesses, aniversário, o que oferece e o que busca). A foto ou a sigla aparece no alto da barra lateral e o perfil entra nos pedidos para a IA.
+- **Ficha completa:** nome, cargo, organização, telefone, e-mail, LinkedIn, Instagram, canal preferido, onde se conheceram, o que a pessoa precisa, o que ela oferece, temas e interesses, anotações e um bloco pessoal (família, gosta, não gosta, aniversário).
+- **Cadência:** diga de quanto em quanto tempo quer falar com cada pessoa. Sem data marcada, o app calcula o próximo contato sozinho.
+- **Hoje:** painel com a fila do dia (toque no círculo quando fizer, com opção de desfazer), follow-ups, atividade da semana, saúde da rede e aniversários.
 - **Prioridade automática:** cada contato cai em uma de quatro caixas (agir hoje, agendar, resolver rápido, deixar para depois) e o app mostra o motivo.
 - **Trazer da IA:** copie o pedido pronto, cole na sua IA junto com a anotação, o print do LinkedIn ou a foto do cartão de visita, e importe a ficha que ela devolver.
 - **Mensagem de follow-up:** um botão copia um pedido para a IA escrever a mensagem usando só o que você registrou.
 - **Linha do tempo de interações:** cada reunião, ligação, WhatsApp, e-mail, LinkedIn, evento ou café fica registrado com data e resumo, como num CRM de empresa. Mudanças de situação entram sozinhas.
 - **Funil:** colunas por situação da relação (novo contato, em conversa, combinado, relação ativa, pausado). É só arrastar.
+- **Conexões:** o mapa da rede que se forma (pessoas ligadas por temas, eventos e trocas), quem combina com você, quem pode ajudar quem e o pedido pronto para a IA escrever uma apresentação, sempre perguntando antes se as duas pessoas topam.
 - **Atividades:** o feed de todas as interações, com filtro por tipo e período.
+- **Arquivar:** tire da frente quem não está mais ativo sem perder o histórico.
+- **Escuro ou claro:** escolha no alto de qualquer tela.
+- **Instalável no celular:** pela página publicada, dá para adicionar à tela de início e usar como aplicativo.
 - **Agenda:** baixa o follow-up como evento para Google Agenda, Outlook ou Apple.
 - **Backup:** exporta tudo em JSON, uma planilha de contatos e uma planilha de interações.
 
@@ -64,7 +71,9 @@ Antes de pedir qualquer mudança, baixe um backup dos seus contatos.
 | Arquivo | Para que serve |
 |---|---|
 | `index.html` | A página do app |
-| `styles.css` | Cores, fontes e layout |
+| `styles.css` | Cores, fontes e layout (design system Noite) |
+| `design-system.html` | A página que mostra cores, tipografia e componentes do app |
+| `manifest.webmanifest`, `sw.js`, `img/` | O que faz o app ser instalável no celular e abrir sem internet |
 | `config.js` | Tipos de relação, pesos e regras. O mais fácil de mudar |
 | `app.js` | Toda a lógica do app |
 | `AGENTS.md` | Instruções para a IA que for mexer no código |

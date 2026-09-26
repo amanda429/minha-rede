@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System Noite · Minha Rede</title>
+<meta name="description" content="Cores, tipografia e componentes do app Minha Rede.">
+<meta name="theme-color" content="#060A14">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .ds { max-width: 1180px; margin: 0 auto; padding: 48px 28px 80px; }
+  .ds header { margin-bottom: 40px; }
+  .ds header small { color: var(--ink2); font-size: 14px; }
+  .ds header h1 { font-size: 52px; margin: 6px 0 10px; }
+  .ds header p { color: var(--ink2); max-width: 62ch; font-size: 17px; margin: 0; }
+  .ds section { margin-top: 44px; }
+  .ds h2.sec { font: 600 22px var(--font-d); letter-spacing: -.02em; margin: 0 0 6px; }
+  .ds p.sec { color: var(--ink2); margin: 0 0 18px; }
+  .sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+  .sw div { padding: 12px; border-radius: 18px; background: var(--glass); border: 1px solid var(--glass-line); }
+  .sw i { display: block; height: 70px; border-radius: 12px; margin-bottom: 10px; border: 1px solid rgba(255, 255, 255, .08); }
+  .sw b { display: block; font-size: 13.5px; }
+  .sw code { font-size: 12px; color: var(--muted); }
+  .tipos div { display: grid; grid-template-columns: 170px 1fr; gap: 20px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--sep); }
+  .tipos span { color: var(--muted); font-size: 13px; }
+  .demo { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+  .fila { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .regras { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .regras div { padding: 18px 20px; border-radius: 18px; background: var(--glass); border: 1px solid var(--glass-line); color: var(--ink2); font-size: 14.5px; }
+  .regras b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
+  @media (max-width: 760px) { .tipos div { grid-template-columns: 1fr; gap: 4px; } }
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gSpark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#60A5FA" stop-opacity=".35"/><stop offset="1" stop-color="#60A5FA" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+  <linearGradient id="gRingQ" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FDBA74"/><stop offset="1" stop-color="#F97316"/></linearGradient>
+</defs></svg>
+
+<div class="ds">
+  <header>
+    <small>Minha Rede · design system</small>
+    <h1>Noite</h1>
+    <p>Fundo quase preto com dois brilhos (azul no alto, laranja no canto), cartões de vidro fosco e dados em anéis, barras e linhas com brilho. Todos os valores moram no <code>:root</code> do arquivo styles.css. Quem for mexer no app pede para a IA seguir esta página.</p>
+  </header>
+
+  <section>
+    <h2 class="sec">Cores</h2>
+    <p class="sec">Azul é a cor de ação. Laranja só aparece para urgência e atraso. Verde confirma. O resto é vidro.</p>
+    <div class="sw">
+      <div><i style="background:#060A14"></i><b>Fundo</b><code>--bg #060A14</code></div>
+      <div><i style="background:rgba(17,25,46,.9)"></i><b>Vidro</b><code>--glass</code></div>
+      <div><i style="background:#EEF2FF"></i><b>Texto</b><code>--ink #EEF2FF</code></div>
+      <div><i style="background:#A3AECB"></i><b>Texto secundário</b><code>--ink2 #A3AECB</code></div>
+      <div><i style="background:#3B82F6"></i><b>Azul</b><code>--azul #3B82F6</code></div>
+      <div><i style="background:#60A5FA"></i><b>Azul claro</b><code>--azul-2 #60A5FA</code></div>
+      <div><i style="background:#8B5CF6"></i><b>Violeta</b><code>--violeta #8B5CF6</code></div>
+      <div><i style="background:#FB923C"></i><b>Laranja</b><code>--laranja #FB923C</code></div>
+      <div><i style="background:#F5A524"></i><b>Âmbar</b><code>--ambar #F5A524</code></div>
+      <div><i style="background:#4ADE80"></i><b>Verde</b><code>--verde #4ADE80</code></div>
+      <div><i style="background:linear-gradient(135deg,#60A5FA,#8B5CF6)"></i><b>Gradiente frio</b><code>--grad</code></div>
+      <div><i style="background:linear-gradient(135deg,#FDBA74,#F97316)"></i><b>Gradiente quente</b><code>--grad-quente</code></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Tipografia</h2>
+    <p class="sec">Fonte do sistema (SF Pro no Mac e no iPhone, Inter como alternativa). Dois pesos: 400 e 600.</p>
+    <div class="tipos">
+      <div><span>Número grande · 52/600</span><b style="font:600 52px/1 var(--font-d);letter-spacing:-.04em">78%</b></div>
+      <div><span>Saudação · 34/600</span><b style="font:600 34px/1.1 var(--font-d);letter-spacing:-.03em">Boa noite, Amanda</b></div>
+      <div><span>Título de cartão · 15,5/600</span><b style="font:600 15.5px var(--font)">Sua fila de hoje</b></div>
+      <div><span>Texto · 15/400</span><p style="margin:0">Registre quem é a pessoa, o que combinaram e quando retomar.</p></div>
+      <div><span>Legenda · 12,5/500</span><p style="margin:0;font-size:12.5px;color:var(--muted)">Interações nos últimos 14 dias</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Superfícies e dados</h2>
+    <p class="sec">Tudo fica em cartões de vidro (classe gcard). Um brilho por cartão, no dado principal.</p>
+    <div class="demo">
+      <article class="gcard s7 saud">
+        <span class="pill">19:45</span>
+        <small>Sábado, 26 de setembro</small>
+        <h2>Boa noite, Amanda</h2>
+        <p>8 interações registradas nos últimos 7 dias. 4 pessoas pedem sua atenção agora.</p>
+        <span class="spark-leg">Exemplo com dados fictícios</span>
+        <svg class="spark" viewBox="0 0 400 120" aria-hidden="true"><path class="a" d="M0,104 C15,104 15,80 31,80 C46,80 46,92 62,92 C77,92 77,60 92,60 C108,60 108,72 123,72 C138,72 138,44 154,44 C169,44 169,58 185,58 C200,58 200,36 215,36 C231,36 231,50 246,50 C262,50 262,28 277,28 C292,28 292,46 308,46 C323,46 323,24 338,24 C354,24 354,40 369,40 C385,40 385,30 400,30 L400,120 L0,120 Z"/><path class="l" d="M0,104 C15,104 15,80 31,80 C46,80 46,92 62,92 C77,92 77,60 92,60 C108,60 108,72 123,72 C138,72 138,44 154,44 C169,44 169,58 185,58 C200,58 200,36 215,36 C231,36 231,50 246,50 C262,50 262,28 277,28 C292,28 292,46 308,46 C323,46 323,24 338,24 C354,24 354,40 369,40 C385,40 385,30 400,30"/><circle cx="154" cy="44" r="3.2"/><circle cx="277" cy="28" r="3.2"/><circle cx="338" cy="24" r="3.2"/></svg>
+      </article>
+      <article class="gcard s5">
+        <div class="gc-h"><h2>Anel</h2><span class="pill">frio e quente</span></div>
+        <div class="fila" style="justify-content:space-around">
+          <div class="ring-wrap"><svg class="ring" viewBox="0 0 140 140" aria-hidden="true"><circle class="trilho" cx="70" cy="70" r="58"/><circle class="valor" cx="70" cy="70" r="58" stroke-dasharray="284.3 364.4"/></svg><div class="centro"><b>78%</b><span>em dia</span></div></div>
+          <div class="ring-wrap"><svg class="ring quente" viewBox="0 0 140 140" aria-hidden="true"><circle class="trilho" cx="70" cy="70" r="58"/><circle class="valor" cx="70" cy="70" r="58" stroke-dasharray="306.1 364.4"/></svg><div class="centro"><b>84%</b><span>sem esfriar</span></div></div>
+        </div>
+      </article>
+      <article class="gcard s5">
+        <div class="gc-h"><h2>Barras da semana</h2><span class="pill">o dia de hoje em destaque</span></div>
+        <div class="barras">
+          <div class="barra"><i style="height:50px"></i><span>Sex</span></div>
+          <div class="barra"><i style="height:78px"></i><span>Sáb</span></div>
+          <div class="barra zero"><i style="height:6px"></i><span>Dom</span></div>
+          <div class="barra"><i style="height:64px"></i><span>Seg</span></div>
+          <div class="barra"><em>4</em><i style="height:120px"></i><span>Ter</span></div>
+          <div class="barra"><i style="height:92px"></i><span>Qua</span></div>
+          <div class="barra hoje"><i style="height:37px"></i><span>Hoje</span></div>
+        </div>
+      </article>
+      <article class="gcard s7">
+        <div class="gc-h"><h2>Lista com status</h2><span>clique no círculo para registrar</span></div>
+        <ul class="tarefas">
+          <li class="q-agir"><button class="ok" type="button" aria-label="Exemplo"></button><div><b>Marina Costa</b><small>Pedir o modelo de indicadores</small></div><span class="st atrasado">Atrasado 3d</span></li>
+          <li class="q-rapido"><button class="ok" type="button" aria-label="Exemplo"></button><div><b>Beatriz Lima</b><small>Receber a base de dados</small></div><span class="st hoje">Hoje</span></li>
+          <li class="q-agir"><button class="ok" type="button" aria-label="Exemplo"></button><div><b>João Nascimento</b><small>Confirmar a consulta às escolas</small></div><span class="st breve">Amanhã</span></li>
+          <li class="q-agir"><button class="ok" type="button" aria-label="Exemplo"></button><div><b>Camila Rocha</b><small>Retomar a conversa sobre patrocínio</small></div><span class="st esfria">Esfriando</span></li>
+        </ul>
+      </article>
+      <article class="gcard s5">
+        <div class="gc-h"><h2>Medidores</h2></div>
+        <div class="medidor"><span>Com follow-up</span><div><i style="width:83%"></i></div><b>83%</b></div>
+        <div class="medidor"><span>Conversa recente</span><div><i style="width:67%"></i></div><b>67%</b></div>
+        <div class="medidor"><span>Tipo definido</span><div><i style="width:100%"></i></div><b>100%</b></div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Botões, selos e campos</h2>
+    <p class="sec">Um botão principal por área (gradiente frio). O resto é vidro.</p>
+    <div class="gcard" style="display:grid;gap:18px">
+      <div class="fila"><button class="btn primary" type="button">Novo contato</button><button class="btn" type="button">Trazer da IA</button><button class="btn ghost" type="button">Cancelar</button><button class="btn danger" type="button">Excluir</button><button class="btn sm" type="button">Pequeno</button></div>
+      <div class="fila"><span class="badge q-agir">Agir hoje</span><span class="badge q-agendar">Agendar</span><span class="badge q-rapido">Resolver rápido</span><span class="badge q-depois">Deixar para depois</span><span class="pill">Pílula</span><span class="chip">Chip</span></div>
+      <div class="grid3"><label class="campo"><span>Nome</span><input placeholder="Carla Mendes"></label><label class="campo"><span>Situação</span><select><option>Em conversa</option></select></label><label class="campo"><span>Quando retomar</span><input type="date"></label></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">Regras de uso</h2>
+    <div class="regras">
+      <div><b>Um brilho por cartão</b>Só o dado principal brilha. Se tudo brilha, nada se destaca.</div>
+      <div><b>Laranja é alerta</b>Use só para atraso e urgência. Nunca como enfeite.</div>
+      <div><b>Número grande, texto curto</b>O número conta a história; a legenda explica em uma linha.</div>
+      <div><b>Dado real ou nada</b>Todo número do painel sai dos contatos registrados. Sem número inventado.</div>
+      <div><b>Contraste primeiro</b>Texto claro sobre vidro escuro. Legendas nunca abaixo de 12px.</div>
+      <div><b>Movimento discreto</b>Transições curtas e respeito à preferência de movimento reduzido.</div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

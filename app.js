@@ -164,8 +164,12 @@
   const filtroAt = { tipo: '', dias: '30' };
   let tipoIntAtual = 'reuniao';
 
-  const salvar = () => store.set(KEY_DADOS, contatos);
-  const salvarAjustes = () => store.set(KEY_AJUSTES, aj);
+  // Ponto de extensão: um script externo (por exemplo, uma sincronização com servidor)
+  // pode se inscrever para saber quando os dados mudam. O app continua inteiro sem ele.
+  const ganchos = { salvar: [], ajustes: [] };
+  const avisar = (lista) => lista.forEach((f) => { try { f(); } catch (e) { /* um gancho com erro não pode travar o app */ } });
+  const salvar = () => { const ok = store.set(KEY_DADOS, contatos); avisar(ganchos.salvar); return ok; };
+  const salvarAjustes = () => { const ok = store.set(KEY_AJUSTES, aj); avisar(ganchos.ajustes); return ok; };
 
   // Perfil da pessoa dona do app. Usado na saudação, na sigla da barra lateral,
   // nos pedidos para a IA e para mostrar quem na rede combina com ela.
@@ -2180,6 +2184,21 @@ Regras:
   const alvoUrl = chave(params.get('contato') || '');
   const alvo = alvoUrl && contatos.find((c) => chave(c.nome).includes(alvoUrl));
   if (alvo) abrirDetalhe(alvo.id);
+
+  // Ponte para scripts externos (veja o comentário em "ganchos"). Nada aqui envia dados a lugar nenhum.
+  window.MinhaRede = {
+    get contatos() { return contatos; },
+    set contatos(lista) { contatos = (Array.isArray(lista) ? lista : []).filter((c) => c && c.nome).map(carregar); },
+    get ajustes() { return aj; },
+    set ajustes(o) { aj = Object.assign(ajustesPadrao(), o || {}); },
+    aoSalvar(f) { ganchos.salvar.push(f); },
+    aoSalvarAjustes(f) { ganchos.ajustes.push(f); },
+    render,
+    abrirDetalhe,
+    toast,
+    janelaAberta: () => dlg.open,
+    normalizar
+  };
 
   // App instalável: guarda os arquivos para abrir mesmo sem internet (só funciona em https).
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
